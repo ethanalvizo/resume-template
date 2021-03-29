@@ -45,6 +45,7 @@ const Index = ({
                     onDelete={onDeleteEducation}
                 />
                 <Button onClick={onPrint}>Generate PDF</Button>
+                <Button onClick={onReset}>Reset</Button>
             </Grid>
         </div>
     )

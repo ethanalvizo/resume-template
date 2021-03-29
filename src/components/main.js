@@ -44,6 +44,46 @@ const Main = () => {
         reader.readAsDataURL(file);
     };
 
+    const handleChangeExperience = (e, id) => {
+        const { name, value } = e.target;
+
+        setResume((prevState) => {
+            const newExperience = prevState.experience.map((experienceItem) => {
+                if (experienceItem.id === id) {
+                    return { ...experienceItem, [name]: value};
+                }
+                return experienceItem;
+            });
+            return { ...prevState, experience: [...newExperience] };
+        });
+    };
+
+    const handleAddExperience = () => {
+        setResume((prevState) => ({
+            ...prevState,
+            experience: [
+                ...prevState.experience,
+                {
+                    id: uuidv4(),
+                    position: "",
+                    company: "",
+                    startDate: "",
+                    endDate: "",
+                }
+            ]
+        }))
+    };
+
+    const handleDeleteExperience = (id) => {
+        setResume((prevState) => {
+            const newExperience = prevState.experience.filter(
+                (experienceItem) => experienceItem.id !== id
+            );
+
+            return { ...prevState, experience: [...newExperience] };
+        })
+    }
+
     const handleChangeEducation = (e,id) => {
         const { name, value } = e.target;
 
@@ -82,6 +122,10 @@ const Main = () => {
             );
             return { ...prevState, education: [...newEducation] };
         })
+    };
+
+    const handleReset = () => {
+        setResume(emptyResume);
     }
 
     const componentRef = useRef();
@@ -91,10 +135,15 @@ const Main = () => {
         <div>
             <Input 
                 resume={resume}
+                onChangePersonal={handleChangePersonal}
+                onChangeExperience={handleChangeExperience}
+                onAddExperience={handleAddExperience}
+                onDelete={handleDeleteExperience}
                 onChangeEducation={handleChangeEducation}
                 onAddEducation={handleAddEducation}
                 onDeleteEducation={handleDeleteEducation}
                 onPrint={handlePrint}
+                onReset={handleReset}
             />
         </div>
     )
