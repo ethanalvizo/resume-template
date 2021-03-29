@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { v4 as uuidv4 } from "uuid"
 import { useReactToPrint } from "react-to-print";
 import Input from "./input";
+import Preview from "./preview";
 import emptyResume from "./utils/emptyResume";
 
 
@@ -129,6 +130,7 @@ const Main = () => {
     }
 
     const componentRef = useRef();
+    
     const handlePrint = useReactToPrint({ content: () => componentRef.current });
 
     return (
@@ -138,13 +140,14 @@ const Main = () => {
                 onChangePersonal={handleChangePersonal}
                 onChangeExperience={handleChangeExperience}
                 onAddExperience={handleAddExperience}
-                onDelete={handleDeleteExperience}
+                onDeleteExperience={handleDeleteExperience}
                 onChangeEducation={handleChangeEducation}
                 onAddEducation={handleAddEducation}
                 onDeleteEducation={handleDeleteEducation}
                 onPrint={handlePrint}
                 onReset={handleReset}
             />
+            <Preview resume={resume} ref={componentRef} />
         </div>
     )
 }
