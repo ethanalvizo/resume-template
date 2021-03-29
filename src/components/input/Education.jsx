@@ -3,12 +3,18 @@ import EducationItem from "./EducationItem";
 
 import { 
     Grid,
-    Button
+    Button,
+    makeStyles,
+    Typography
 } from '@material-ui/core';
+import { education as styles} from "./styles";
 
 
+const useStyles = makeStyles(styles);
 
 const Education = ({ education, onChange, onAdd, onDelete }) => {
+    const classes = useStyles();
+
     const educationItems = education.map((educationItem) => (
         <EducationItem 
             key={educationItem.id}
@@ -20,8 +26,11 @@ const Education = ({ education, onChange, onAdd, onDelete }) => {
     ))
 
     return (
-        <Grid>
-            {educationItems}
+        <Grid container className={classes.root}>
+            <Typography>Education</Typography>
+            <Grid item>
+                {educationItems}
+            </Grid>
             <Button onClick={onAdd}>Add</Button>
         </Grid>
     )

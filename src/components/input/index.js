@@ -2,12 +2,16 @@ import React from 'react'
 import Personal from "./Personal";
 import Education from "./Education";
 import Experience from "./Experience";
-
 import {
-    Button
+    Grid,
+    Button,
+    makeStyles,
 } from "@material-ui/core";
+import { formWrapper as styles } from "./styles";
 
-const index = ({
+const useStyles = makeStyles(styles);
+
+const Index = ({
     resume,
     onChangePersonal,
     onChangeExperience,
@@ -19,17 +23,31 @@ const index = ({
     onPrint,
     onReset,
 }) => {
+    const classes = useStyles();
+
     return (
         <div>
-            <Education 
-                education={resume.education}
-                onChange={onChangeEducation}
-                onAdd={onAddEducation}
-                onDelete={onDeleteEducation}
-            />
-            <Button onClick={onPrint}>Generate PDF</Button>
+            <Grid className={classes.form}>
+                <Personal 
+                    personalInfo={resume.personalInfo} 
+                    onChange={onChangePersonal} 
+                />
+                <Experience 
+                    experience={resume.experience}
+                    onChange={onChangeExperience}
+                    onAdd={onAddExperience}
+                    onDelete={onDeleteExperience}
+                />
+                <Education 
+                    education={resume.education}
+                    onChange={onChangeEducation}
+                    onAdd={onAddEducation}
+                    onDelete={onDeleteEducation}
+                />
+                <Button onClick={onPrint}>Generate PDF</Button>
+            </Grid>
         </div>
     )
 }
 
-export default index;
+export default Index;

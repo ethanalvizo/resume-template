@@ -14,6 +14,7 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 name="universityName"
                 placeholder="University"
                 value={educationItem.universityName}
+                fullWidth={true}
             />
             <Input
                 onChange={(e) => onChange(e,id)}
@@ -21,6 +22,7 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 name="degree"
                 placeholder="Degree"
                 value={educationItem.degree}
+                fullWidth={true}
             />
             <Input
                 onChange={(e) => onChange(e,id)}
@@ -28,6 +30,7 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 name="subject"
                 placeholder="Subject"
                 value={educationItem.universityName}
+                fullWidth={true}
             />
             <Input
                 onChange={(e) => onChange(e,id)}
@@ -35,13 +38,15 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 name="startDate"
                 placeholder="Start Date"
                 value={educationItem.startDate}
+                fullWidth={true}
             />
             <Input
                 onChange={(e) => onChange(e,id)}
                 type="text"
                 name="endDate"
-                placeholder="endDate"
+                placeholder="End Date"
                 value={educationItem.endDate}
+                fullWidth={true}
             />
             <Button onClick={() => onDelete(id)}>Delete</Button>
         </div>
