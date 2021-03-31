@@ -4,10 +4,20 @@ import { useReactToPrint } from "react-to-print";
 import Input from "./input";
 import Preview from "./preview";
 import emptyResume from "./utils/emptyResume";
+import styles from "./styles"
+
+import {
+    Grid,
+    Typography,
+    makeStyles
+} from "@material-ui/core";
+
+const useStyles = makeStyles(styles);
 
 
 const Main = () => {
     const [resume, setResume] = useState(emptyResume);
+    const classes = useStyles();
 
     const handleChangePersonal = (e) => {
         const { name, value, type } = e.target;
@@ -134,21 +144,25 @@ const Main = () => {
     const handlePrint = useReactToPrint({ content: () => componentRef.current });
 
     return (
-        <div>
-            <Input 
-                resume={resume}
-                onChangePersonal={handleChangePersonal}
-                onChangeExperience={handleChangeExperience}
-                onAddExperience={handleAddExperience}
-                onDeleteExperience={handleDeleteExperience}
-                onChangeEducation={handleChangeEducation}
-                onAddEducation={handleAddEducation}
-                onDeleteEducation={handleDeleteEducation}
-                onPrint={handlePrint}
-                onReset={handleReset}
-            />
-            <Preview resume={resume} ref={componentRef} />
-        </div>
+        <Grid container>
+            <Grid item>
+                <Input 
+                    resume={resume}
+                    onChangePersonal={handleChangePersonal}
+                    onChangeExperience={handleChangeExperience}
+                    onAddExperience={handleAddExperience}
+                    onDeleteExperience={handleDeleteExperience}
+                    onChangeEducation={handleChangeEducation}
+                    onAddEducation={handleAddEducation}
+                    onDeleteEducation={handleDeleteEducation}
+                    onPrint={handlePrint}
+                    onReset={handleReset}
+                />
+            </Grid>
+            <Grid item>
+                <Preview resume={resume} ref={componentRef} />
+            </Grid>
+        </Grid>
     )
 }
 

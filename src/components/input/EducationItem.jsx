@@ -11,9 +11,9 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
             <Input
                 onChange={(e) => onChange(e,id)}
                 type="text"
-                name="universityName"
+                name="university"
                 placeholder="University"
-                value={educationItem.universityName}
+                value={educationItem.university}
                 fullWidth={true}
             />
             <Input
@@ -29,7 +29,7 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 type="text"
                 name="subject"
                 placeholder="Subject"
-                value={educationItem.universityName}
+                value={educationItem.subject}
                 fullWidth={true}
             />
             <Input
