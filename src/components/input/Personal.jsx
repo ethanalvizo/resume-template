@@ -3,12 +3,18 @@ import {
     Grid,
     Input,
     Typography,
+    makeStyles
 } from '@material-ui/core';
 
+import { personal as styles } from "./styles";
+
+const useStyles = makeStyles(styles);
+
 const Personal = ({ personalInfo, onChange }) => {
+    const classes = useStyles();
     return (
         <Grid>
-            <Typography>Personal Information</Typography>
+            <Typography className={classes.title}>Personal Information</Typography>
             <Input
                 onChange={(e) => onChange(e)}
                 type="text"
@@ -16,6 +22,8 @@ const Personal = ({ personalInfo, onChange }) => {
                 placeholder="First Name"
                 value={personalInfo.firstName}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             <Input
                 onChange={(e) => onChange(e)}
@@ -24,6 +32,8 @@ const Personal = ({ personalInfo, onChange }) => {
                 placeholder="Last Name"
                 value={personalInfo.lastName}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             <Input
                 onChange={(e) => onChange(e)}
@@ -32,6 +42,8 @@ const Personal = ({ personalInfo, onChange }) => {
                 placeholder="Title"
                 value={personalInfo.title}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             <Input
                 onChange={(e) => onChange(e)}
@@ -40,6 +52,8 @@ const Personal = ({ personalInfo, onChange }) => {
                 placeholder="Phone Number"
                 value={personalInfo.phoneNumber}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             <Input
                 onChange={(e) => onChange(e)}
@@ -48,6 +62,8 @@ const Personal = ({ personalInfo, onChange }) => {
                 placeholder="Email"
                 value={personalInfo.email}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
         </Grid>
     )

@@ -6,6 +6,7 @@ import {
     Grid,
     Button,
     makeStyles,
+    Card
 } from "@material-ui/core";
 import { formWrapper as styles } from "./styles";
 
@@ -27,7 +28,7 @@ const Index = ({
 
     return (
         <div>
-            <Grid className={classes.form}>
+            <Card className={classes.form}>
                 <Personal 
                     personalInfo={resume.personalInfo} 
                     onChange={onChangePersonal} 
@@ -44,9 +45,9 @@ const Index = ({
                     onAdd={onAddEducation}
                     onDelete={onDeleteEducation}
                 />
-                <Button onClick={onPrint}>Generate PDF</Button>
-                <Button onClick={onReset}>Reset</Button>
-            </Grid>
+                <Button onClick={onPrint} fullWidth={true} className={classes.print}>Generate PDF</Button>
+                <Button onClick={onReset} fullWidth={true} className={classes.reset}>Reset</Button>
+            </Card>
         </div>
     )
 }

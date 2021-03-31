@@ -3,9 +3,15 @@ import {
     Grid,
     Button,
     Input,
+    makeStyles
 } from '@material-ui/core';
+import { education as styles} from "./styles";
+
+const useStyles = makeStyles(styles);
 
 const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
+    const classes = useStyles();
+
     return (
         <div>
             <Input
@@ -15,6 +21,8 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 placeholder="University"
                 value={educationItem.university}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             <Input
                 onChange={(e) => onChange(e,id)}
@@ -23,6 +31,8 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 placeholder="Degree"
                 value={educationItem.degree}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             <Input
                 onChange={(e) => onChange(e,id)}
@@ -31,6 +41,8 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 placeholder="Subject"
                 value={educationItem.subject}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             <Input
                 onChange={(e) => onChange(e,id)}
@@ -39,6 +51,8 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 placeholder="Start Date"
                 value={educationItem.startDate}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             <Input
                 onChange={(e) => onChange(e,id)}
@@ -47,8 +61,10 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 placeholder="End Date"
                 value={educationItem.endDate}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
-            <Button onClick={() => onDelete(id)}>Delete</Button>
+            <Button onClick={() => onDelete(id)} fullWidth={true} className={classes.delete}>Delete</Button>
         </div>
     )
 }

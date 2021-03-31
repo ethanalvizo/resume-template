@@ -27,11 +27,11 @@ const Education = ({ education, onChange, onAdd, onDelete }) => {
 
     return (
         <Grid container className={classes.root}>
-            <Typography>Education</Typography>
+            <Typography className={classes.title}>Education</Typography>
             <Grid item>
                 {educationItems}
             </Grid>
-            <Button onClick={onAdd}>Add</Button>
+            <Button onClick={onAdd} fullWidth={true} className={classes.add}>Add</Button>
         </Grid>
     )
 }

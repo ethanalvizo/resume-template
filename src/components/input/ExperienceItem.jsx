@@ -3,9 +3,14 @@ import {
     Grid,
     Button,
     Input,
+    makeStyles,
 } from '@material-ui/core';
+import { experience as styles } from "./styles";
+
+const useStyles = makeStyles(styles);
 
 const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
+    const classes = useStyles();
     return (
         <div>
             <Input
@@ -15,6 +20,8 @@ const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
                 placeholder="Position"
                 value={experienceItem.position}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             <Input
                 onChange={(e) => onChange(e,id)}
@@ -23,6 +30,8 @@ const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
                 placeholder="Company"
                 value={experienceItem.company}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             <Input
                 onChange={(e) => onChange(e,id)}
@@ -31,6 +40,8 @@ const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
                 placeholder="Start Date"
                 value={experienceItem.startDate}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             <Input
                 onChange={(e) => onChange(e,id)}
@@ -39,9 +50,11 @@ const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
                 placeholder="End Date"
                 value={experienceItem.endDate}
                 fullWidth={true}
+                className={classes.input}
+                disableUnderline={true}
             />
             {/* To do: Allow them to add description for their job role*/}
-            <Button onClick={() => onDelete(id)}>Delete</Button>
+            <Button onClick={() => onDelete(id)} fullWidth={true} className={classes.delete}>Delete</Button>
         </div>
     )
 }
