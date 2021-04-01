@@ -3,7 +3,6 @@ export const formWrapper = () => ({
         display: 'flex',
         flexDirection: 'column',
         gap: '3rem',
-        width: '210mm',
         padding: '2rem',
         borderRadius: '5px',
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
@@ -12,12 +11,12 @@ export const formWrapper = () => ({
     print: {
         backgroundColor: '#009900',
         color: 'white',
-        margin: '10px 0px',
+        margin: '0px',
     },
     reset: {
-        backgroundColor: '#C80000',
+        backgroundColor: '#880000',
         color: 'white',
-        margin: '10px 0px',
+        margin: '-35px 0px 0px',
     }
 });
 

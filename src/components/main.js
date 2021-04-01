@@ -144,23 +144,27 @@ const Main = () => {
     const handlePrint = useReactToPrint({ content: () => componentRef.current });
 
     return (
-        <Grid container>
+        <Grid container className={classes.root}>
             <Grid item>
-                <Input 
-                    resume={resume}
-                    onChangePersonal={handleChangePersonal}
-                    onChangeExperience={handleChangeExperience}
-                    onAddExperience={handleAddExperience}
-                    onDeleteExperience={handleDeleteExperience}
-                    onChangeEducation={handleChangeEducation}
-                    onAddEducation={handleAddEducation}
-                    onDeleteEducation={handleDeleteEducation}
-                    onPrint={handlePrint}
-                    onReset={handleReset}
-                />
-            </Grid>
-            <Grid item>
-                <Preview resume={resume} ref={componentRef} />
+                <Grid container justify="space-evenly">
+                    <Grid item md={4} lg ={4} xl={5} className={classes.form}>
+                        <Input 
+                            resume={resume}
+                            onChangePersonal={handleChangePersonal}
+                            onChangeExperience={handleChangeExperience}
+                            onAddExperience={handleAddExperience}
+                            onDeleteExperience={handleDeleteExperience}
+                            onChangeEducation={handleChangeEducation}
+                            onAddEducation={handleAddEducation}
+                            onDeleteEducation={handleDeleteEducation}
+                            onPrint={handlePrint}
+                            onReset={handleReset}
+                        />
+                    </Grid>
+                    <Grid item md={6} lg ={6} xl={5} className={classes.preview}>
+                        <Preview resume={resume} ref={componentRef} />
+                    </Grid>
+                </Grid>
             </Grid>
         </Grid>
     )

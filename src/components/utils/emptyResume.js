@@ -5,11 +5,11 @@ const exampleCV = {
     firstName: "",
     lastName: "",
     title: "",
-    photo: "",
     address: "",
     phoneNumber: "",
     email: "",
-    description: "",
+    website: "",
+    github: "",
   },
   experience: [
     {
