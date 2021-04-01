@@ -23,13 +23,13 @@ const Header = ({ personalInfo }) => {
     return (
         <header className={classes.root}>
             <Grid container>
-                <Grid item lg={6} style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
+                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
                     <Typography className={classes.personal}>
                         {firstName} {lastName}
                     </Typography>
                     <Typography className={classes.title}> {title} </Typography>
                 </Grid>
-                <Grid item lg={6}>
+                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                     <Typography className={classes.contact}>
                         {email}
                     </Typography>

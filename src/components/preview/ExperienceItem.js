@@ -20,12 +20,12 @@ const ExperienceItem = ({ experienceItem }) => {
 
     return (
         <Grid container>
-            <Grid item xl={12}>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Grid container>
-                    <Grid item xl={6} className={classes.jobTitle}>
-                        <Typography>{company}<span className={classes.divider}> | </span><span className={classes.jobPosition}>{position}</span></Typography>
+                    <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className={classes.jobTitle}>
+                        <Typography>{company} <span className={classes.divider}> | </span><span className={classes.jobPosition}>{position}</span> </Typography>
                     </Grid>
-                    <Grid item xl={6} className={classes.jobDate}>
+                    <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className={classes.jobDate}>
                         {startDate} - {endDate}
                     </Grid>
                 </Grid>

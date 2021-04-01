@@ -16,9 +16,9 @@ const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
             <Input
                 onChange={(e) => onChange(e,id)}
                 type="text"
-                name="position"
-                placeholder="Position"
-                value={experienceItem.position}
+                name="company"
+                placeholder="Company"
+                value={experienceItem.company}
                 fullWidth={true}
                 className={classes.input}
                 disableUnderline={true}
@@ -26,9 +26,9 @@ const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
             <Input
                 onChange={(e) => onChange(e,id)}
                 type="text"
-                name="company"
-                placeholder="Company"
-                value={experienceItem.company}
+                name="position"
+                placeholder="Position"
+                value={experienceItem.position}
                 fullWidth={true}
                 className={classes.input}
                 disableUnderline={true}

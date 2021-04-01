@@ -8,7 +8,6 @@ import styles from "./styles"
 
 import {
     Grid,
-    Typography,
     makeStyles
 } from "@material-ui/core";
 
