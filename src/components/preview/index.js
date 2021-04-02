@@ -20,6 +20,7 @@ export default class index extends Component {
                 <Content 
                     personalInfo={resume.personalInfo}
                     experience={resume.experience}
+                    project={resume.project}
                     education={resume.education}
                 />
             </Grid>

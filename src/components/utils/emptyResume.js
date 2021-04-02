@@ -2,8 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 
 const exampleCV = {
   personalInfo: {
-    firstName: "",
-    lastName: "",
+    fullName: "",
     title: "",
     address: "",
     phoneNumber: "",
@@ -20,6 +19,14 @@ const exampleCV = {
       endDate: "",
     },
   ],
+  project: [
+    {
+      id: uuidv4(),
+      name: "",
+      technology: "",
+      description: "",
+    },
+  ],
   education: [
     {
       id: uuidv4(),
@@ -28,6 +35,7 @@ const exampleCV = {
       subject: "",
       startDate: "",
       endDate: "",
+      relevant: "",
     },
   ],
 };

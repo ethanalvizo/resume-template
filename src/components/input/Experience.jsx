@@ -28,7 +28,7 @@ const Experience = ({ experience, onChange, onAdd, onDelete }) => {
     return (
         <Grid container className={classes.root}>
             <Typography className={classes.title}>Experience</Typography>
-            <Grid item>
+            <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 {experienceItems}
             </Grid>
             <Button onClick={onAdd} fullWidth={true} className={classes.add}>Add</Button>

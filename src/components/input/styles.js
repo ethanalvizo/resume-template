@@ -79,6 +79,46 @@ export const experience = () => ({
         borderRadius: '5px',
         paddingLeft: '10px',
     },
+    inputDescription: {
+        backgroundColor: 'white',
+        margin: '5px 0px',
+        borderRadius: '5px',
+        paddingLeft: '10px',
+    },
+    add: {
+        backgroundColor: '#181818',
+        color: 'white',
+        margin: '10px 0px',
+    },
+    delete: {
+        backgroundColor: '#181818',
+        color: 'white',
+        margin: '10px 0px 5px',
+    }
+});
+
+export const project = () => ({
+    root: {
+        direction: 'column',
+    },
+    title: {
+        fontWeight: 'bolder',
+        fontSize: '24px',
+        textAlign: 'left',
+        paddingLeft: '5px',
+    },
+    input: {
+        backgroundColor: 'white',
+        margin: '5px 0px',
+        borderRadius: '5px',
+        paddingLeft: '10px',
+    },
+    inputDescription: {
+        backgroundColor: 'white',
+        margin: '5px 0px',
+        borderRadius: '5px',
+        paddingLeft: '10px',
+    },
     add: {
         backgroundColor: '#181818',
         color: 'white',

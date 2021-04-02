@@ -12,6 +12,7 @@ export const content = () => ({
         textTransform: 'uppercase',
         fontSize: '16px',
         textAlign: 'left',
+        fontWeight: 'bold',
     }
 });
 
@@ -59,6 +60,24 @@ export const experience = () => ({
     }
 });
 
+export const project = () => ({
+    name: {
+        textAlign: 'left',
+        color: 'green',
+        fontWeight: 'bold',
+        fontSize: '14px',
+    },
+    divider: {
+        color: 'black',
+        fontSize: '16px',
+    },
+    technology: {
+        color: 'black',
+        fontStyle: 'italic',
+        fontSize: '13px',
+    },
+});
+
 export const education = () => ({
     school: {
         textAlign: 'left',
@@ -79,5 +98,15 @@ export const education = () => ({
         textAlign: 'right',
         fontSize: '13px',
         color: '#666666'
+    },
+    relevant: {
+        textAlign: 'left',
+        fontWeight: 'bold',
+        fontSize: '14px',
+    },
+    relevantInfo: {
+        textAlign: 'left',
+        fontWeight: 'normal',
+        fontSize: '14px',
     }
 });

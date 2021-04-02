@@ -2,6 +2,7 @@ import React from 'react'
 import Personal from "./Personal";
 import Education from "./Education";
 import Experience from "./Experience";
+import Project from "./Project";
 import {
     Grid,
     Button,
@@ -18,6 +19,9 @@ const Index = ({
     onChangeExperience,
     onAddExperience,
     onDeleteExperience,
+    onChangeProject,
+    onAddProject,
+    onDeleteProject,
     onChangeEducation,
     onAddEducation,
     onDeleteEducation,
@@ -38,6 +42,12 @@ const Index = ({
                     onChange={onChangeExperience}
                     onAdd={onAddExperience}
                     onDelete={onDeleteExperience}
+                />
+                <Project 
+                    project={resume.project}
+                    onChange={onChangeProject}
+                    onAdd={onAddProject}
+                    onDelete={onDeleteProject}
                 />
                 <Education 
                     education={resume.education}

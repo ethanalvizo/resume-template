@@ -94,6 +94,45 @@ const Main = () => {
         })
     }
 
+    const handleChangeProject = (e, id) => {
+        const { name, value } = e.target;
+
+        setResume((prevState) => {
+            const newProject = prevState.project.map((projectItem) => {
+                if (projectItem.id === id) {
+                    return { ...projectItem, [name]: value};
+                }
+                return projectItem;
+            });
+            return { ...prevState, project: [...newProject] };
+        });
+    };
+
+    const handleAddProject = () => {
+        setResume((prevState) => ({
+            ...prevState,
+            project: [
+                ...prevState.project,
+                {
+                    id: uuidv4(),
+                    name: "",
+                    technology: "",
+                    description: "",
+                }
+            ]
+        }))
+    };
+
+    const handleDeleteProject = (id) => {
+        setResume((prevState) => {
+            const newProject = prevState.project.filter(
+                (projectItem) => projectItem.id !== id
+            );
+
+            return { ...prevState, project: [...newProject] };
+        })
+    }
+
     const handleChangeEducation = (e,id) => {
         const { name, value } = e.target;
 
@@ -153,6 +192,9 @@ const Main = () => {
                             onChangeExperience={handleChangeExperience}
                             onAddExperience={handleAddExperience}
                             onDeleteExperience={handleDeleteExperience}
+                            onChangeProject={handleChangeProject}
+                            onAddProject={handleAddProject}
+                            onDeleteProject={handleDeleteProject}
                             onChangeEducation={handleChangeEducation}
                             onAddEducation={handleAddEducation}
                             onDeleteEducation={handleDeleteEducation}

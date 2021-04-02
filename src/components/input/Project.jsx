@@ -1,5 +1,5 @@
 import React from 'react';
-import EducationItem from "./EducationItem";
+import ProjectItem from './ProjectItem';
 
 import { 
     Grid,
@@ -7,19 +7,19 @@ import {
     makeStyles,
     Typography
 } from '@material-ui/core';
-import { education as styles} from "./styles";
+import { project as styles} from "./styles";
 
 
 const useStyles = makeStyles(styles);
 
-const Education = ({ education, onChange, onAdd, onDelete }) => {
+const Project = ({ project, onChange, onAdd, onDelete }) => {
     const classes = useStyles();
 
-    const educationItems = education.map((educationItem) => (
-        <EducationItem 
-            key={educationItem.id}
-            id={educationItem.id}
-            educationItem={educationItem}
+    const projectItems = project.map((projectItem) => (
+        <ProjectItem 
+            key={projectItem.id}
+            id={projectItem.id}
+            projectItem={projectItem}
             onChange={onChange}
             onDelete={onDelete}
         />
@@ -27,13 +27,13 @@ const Education = ({ education, onChange, onAdd, onDelete }) => {
 
     return (
         <Grid container className={classes.root}>
-            <Typography className={classes.title}>Education</Typography>
+            <Typography className={classes.title}>Projects</Typography>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                {educationItems}
+                {projectItems}
             </Grid>
             <Button onClick={onAdd} fullWidth={true} className={classes.add}>Add</Button>
         </Grid>
     )
 }
 
-export default Education;
+export default Project;

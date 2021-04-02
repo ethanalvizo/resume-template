@@ -33,27 +33,44 @@ const ExperienceItem = ({ id, experienceItem, onChange, onDelete }) => {
                 className={classes.input}
                 disableUnderline={true}
             />
+            <Grid container spacing={2}>
+                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                    <Input
+                        onChange={(e) => onChange(e,id)}
+                        type="text"
+                        name="startDate"
+                        placeholder="Start Date"
+                        value={experienceItem.startDate}
+                        fullWidth={true}
+                        className={classes.input}
+                        disableUnderline={true}
+                    />
+                </Grid>
+                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                    <Input
+                        onChange={(e) => onChange(e,id)}
+                        type="text"
+                        name="endDate"
+                        placeholder="End Date"
+                        value={experienceItem.endDate}
+                        fullWidth={true}
+                        className={classes.input}
+                        disableUnderline={true}
+                    />
+                </Grid>
+            </Grid>
             <Input
                 onChange={(e) => onChange(e,id)}
                 type="text"
-                name="startDate"
-                placeholder="Start Date"
-                value={experienceItem.startDate}
+                name="description"
+                placeholder="Description"
+                value={experienceItem.description}
                 fullWidth={true}
-                className={classes.input}
+                className={classes.inputDescription}
+                multiline={true}
                 disableUnderline={true}
+                rows="3"
             />
-            <Input
-                onChange={(e) => onChange(e,id)}
-                type="text"
-                name="endDate"
-                placeholder="End Date"
-                value={experienceItem.endDate}
-                fullWidth={true}
-                className={classes.input}
-                disableUnderline={true}
-            />
-            {/* To do: Allow them to add description for their job role*/}
             <Button onClick={() => onDelete(id)} fullWidth={true} className={classes.delete}>Delete</Button>
         </div>
     )

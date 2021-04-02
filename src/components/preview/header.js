@@ -11,8 +11,7 @@ const useStyles = makeStyles(styles);
 const Header = ({ personalInfo }) => {
     const classes = useStyles();
     const { 
-        firstName, 
-        lastName, 
+        fullName, 
         title, 
         email, 
         phoneNumber,
@@ -20,12 +19,14 @@ const Header = ({ personalInfo }) => {
         github
     } = personalInfo;
 
+    const isPhone = (phoneNumber != '') ? true : false;
+
     return (
         <header className={classes.root}>
             <Grid container>
                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6} style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
                     <Typography className={classes.personal}>
-                        {firstName} {lastName}
+                        {fullName}
                     </Typography>
                     <Typography className={classes.title}> {title} </Typography>
                 </Grid>
@@ -33,9 +34,9 @@ const Header = ({ personalInfo }) => {
                     <Typography className={classes.contact}>
                         {email}
                     </Typography>
-                    <Typography className={classes.contact}>
+                    {isPhone && <Typography className={classes.contact}>
                         ({phoneNumber.substring(0,3)}) {phoneNumber.substring(3,6)}-{phoneNumber.substring(6,10)}
-                    </Typography>
+                    </Typography>}
                     <Typography className={classes.contact}>
                         {website}
                     </Typography>

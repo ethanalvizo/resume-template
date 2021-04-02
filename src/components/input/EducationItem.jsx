@@ -3,7 +3,8 @@ import {
     Grid,
     Button,
     Input,
-    makeStyles
+    makeStyles,
+    TextField
 } from '@material-ui/core';
 import { education as styles} from "./styles";
 
@@ -24,7 +25,7 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 className={classes.input}
                 disableUnderline={true}
             />
-            <Input
+            {/* <Input
                 onChange={(e) => onChange(e,id)}
                 type="text"
                 name="degree"
@@ -33,7 +34,7 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 fullWidth={true}
                 className={classes.input}
                 disableUnderline={true}
-            />
+            /> */}
             <Input
                 onChange={(e) => onChange(e,id)}
                 type="text"
@@ -44,22 +45,38 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
                 className={classes.input}
                 disableUnderline={true}
             />
+            <Grid container spacing={2}>
+                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                    <Input
+                        onChange={(e) => onChange(e,id)}
+                        type="text"
+                        name="startDate"
+                        placeholder="Start Date"
+                        value={educationItem.startDate}
+                        fullWidth={true}
+                        className={classes.input}
+                        disableUnderline={true}
+                    />
+                </Grid>
+                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                    <Input
+                        onChange={(e) => onChange(e,id)}
+                        type="text"
+                        name="endDate"
+                        placeholder="End Date"
+                        value={educationItem.endDate}
+                        fullWidth={true}
+                        className={classes.input}
+                        disableUnderline={true}
+                    />
+                </Grid>
+            </Grid>
             <Input
                 onChange={(e) => onChange(e,id)}
                 type="text"
-                name="startDate"
-                placeholder="Start Date"
-                value={educationItem.startDate}
-                fullWidth={true}
-                className={classes.input}
-                disableUnderline={true}
-            />
-            <Input
-                onChange={(e) => onChange(e,id)}
-                type="text"
-                name="endDate"
-                placeholder="End Date"
-                value={educationItem.endDate}
+                name="relevant"
+                placeholder="Relevant Courses/Concepts"
+                value={educationItem.relevant}
                 fullWidth={true}
                 className={classes.input}
                 disableUnderline={true}

@@ -18,19 +18,9 @@ const Personal = ({ personalInfo, onChange }) => {
             <Input
                 onChange={(e) => onChange(e)}
                 type="text"
-                name="firstName"
-                placeholder="First Name"
-                value={personalInfo.firstName}
-                fullWidth={true}
-                className={classes.input}
-                disableUnderline={true}
-            />
-            <Input
-                onChange={(e) => onChange(e)}
-                type="text"
-                name="lastName"
-                placeholder="Last Name"
-                value={personalInfo.lastName}
+                name="fullName"
+                placeholder="Full Name"
+                value={personalInfo.fullName}
                 fullWidth={true}
                 className={classes.input}
                 disableUnderline={true}
@@ -48,20 +38,23 @@ const Personal = ({ personalInfo, onChange }) => {
             <Input
                 onChange={(e) => onChange(e)}
                 type="text"
-                maxlength="10"
-                name="phoneNumber"
-                placeholder="Phone Number"
-                value={personalInfo.phoneNumber}
+                name="email"
+                placeholder="Email"
+                value={personalInfo.email}
                 fullWidth={true}
                 className={classes.input}
                 disableUnderline={true}
+                style={{
+                    marginTop: '1em',
+                }}
             />
             <Input
                 onChange={(e) => onChange(e)}
                 type="text"
-                name="email"
-                placeholder="Email"
-                value={personalInfo.email}
+                maxlength="10"
+                name="phoneNumber"
+                placeholder="Phone Number"
+                value={personalInfo.phoneNumber}
                 fullWidth={true}
                 className={classes.input}
                 disableUnderline={true}
