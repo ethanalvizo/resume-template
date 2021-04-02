@@ -1,10 +1,12 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { v4 as uuidv4 } from "uuid"
 import { useReactToPrint } from "react-to-print";
 import Input from "./input";
 import Preview from "./preview";
 import emptyResume from "./utils/emptyResume";
-import styles from "./styles"
+import sampleResume from "./utils/exampleResume";
+import styles from "./styles";
+import WebFont from 'webfontloader';
 
 import {
     Grid,
@@ -17,6 +19,14 @@ const useStyles = makeStyles(styles);
 const Main = () => {
     const [resume, setResume] = useState(emptyResume);
     const classes = useStyles();
+
+    useEffect(() => {
+        WebFont.load({
+            google: {
+                families: ['Nanum Gothic']
+            }
+        });
+    }, []);
 
     const handleChangePersonal = (e) => {
         const { name, value, type } = e.target;
@@ -173,6 +183,10 @@ const Main = () => {
         })
     };
 
+    const handleLoadExample = () => {
+        setResume(sampleResume)
+    }
+
     const handleReset = () => {
         setResume(emptyResume);
     }
@@ -199,6 +213,7 @@ const Main = () => {
                             onAddEducation={handleAddEducation}
                             onDeleteEducation={handleDeleteEducation}
                             onPrint={handlePrint}
+                            onLoadExample={handleLoadExample}
                             onReset={handleReset}
                         />
                     </Grid>

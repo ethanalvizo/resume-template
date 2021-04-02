@@ -17,6 +17,11 @@ export const formWrapper = () => ({
         backgroundColor: '#880000',
         color: 'white',
         margin: '-35px 0px 0px',
+    },
+    load: {
+        backgroundColor: '#FF6600',
+        color: 'white',
+        margin: '-35px 0px 0px',
     }
 });
 

@@ -27,7 +27,9 @@ const ExperienceItem = ({ experienceItem }) => {
         list = description.split('-').filter(item => item !== '').map(item => (
             <li 
                 style={{
-                    textAlign: 'left'
+                    textAlign: 'left',
+                    fontFamily: 'Nanum Gothic',
+                    lineHeight: '1.5'
                 }}
             >
                 {item}
@@ -36,7 +38,7 @@ const ExperienceItem = ({ experienceItem }) => {
     }
 
     return (
-        <Grid container>
+        <Grid container style={{margin: '0em 0em 0.5em'}}>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <Grid container>
                     <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className={classes.jobTitle}>

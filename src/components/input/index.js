@@ -26,6 +26,7 @@ const Index = ({
     onAddEducation,
     onDeleteEducation,
     onPrint,
+    onLoadExample,
     onReset,
 }) => {
     const classes = useStyles();
@@ -56,6 +57,7 @@ const Index = ({
                     onDelete={onDeleteEducation}
                 />
                 <Button onClick={onPrint} fullWidth={true} className={classes.print}>Generate PDF</Button>
+                <Button onClick={onLoadExample} fullWidth={true} className={classes.load}>Load Sample</Button>
                 <Button onClick={onReset} fullWidth={true} className={classes.reset}>Reset</Button>
             </Card>
         </div>

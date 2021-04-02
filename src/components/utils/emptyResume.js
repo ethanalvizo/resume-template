@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 
-const exampleCV = {
+const emptyResume = {
   personalInfo: {
     fullName: "",
     title: "",
@@ -40,4 +40,4 @@ const exampleCV = {
   ],
 };
 
-export default exampleCV;
+export default emptyResume;

@@ -13,6 +13,7 @@ export const content = () => ({
         fontSize: '16px',
         textAlign: 'left',
         fontWeight: 'bold',
+        fontFamily: 'Nanum Gothic',
     }
 });
 
@@ -25,14 +26,17 @@ export const header = () => ({
     },
     personal: {
         fontSize: '26px',
+        fontFamily: 'Nanum Gothic',
         textAlign: 'left',
     },
     title: {
         fontSize: '14px',
+        fontFamily: 'Nanum Gothic',
         textAlign: 'left',
     },
     contact: {
         fontSize: '12px',
+        fontFamily: 'Nanum Gothic',
         textAlign: 'right',
     },
 });
@@ -43,19 +47,23 @@ export const experience = () => ({
         color: 'green',
         fontWeight: 'bold',
         fontSize: '14px',
+        fontFamily: 'Nanum Gothic',
     },
     divider: {
         color: 'black',
         fontSize: '16px',
+        fontFamily: 'Nanum Gothic',
     },
     jobPosition: {
         color: 'black',
         fontStyle: 'italic',
         fontSize: '13px',
+        fontFamily: 'Nanum Gothic',
     },
     jobDate: {
         textAlign: 'right',
         fontSize: '13px',
+        fontFamily: 'Nanum Gothic',
         color: '#666666'
     }
 });
@@ -66,15 +74,18 @@ export const project = () => ({
         color: 'green',
         fontWeight: 'bold',
         fontSize: '14px',
+        fontFamily: 'Nanum Gothic',
     },
     divider: {
         color: 'black',
         fontSize: '16px',
+        fontFamily: 'Nanum Gothic',
     },
     technology: {
         color: 'black',
         fontStyle: 'italic',
         fontSize: '13px',
+        fontFamily: 'Nanum Gothic',
     },
 });
 
@@ -84,29 +95,35 @@ export const education = () => ({
         color: 'green',
         fontWeight: 'bold',
         fontSize: '14px',
+        fontFamily: 'Nanum Gothic',
     },
     divider: {
         color: 'black',
         fontSize: '16px',
+        fontFamily: 'Nanum Gothic',
     },
     subject: {
         color: 'black',
         fontStyle: 'italic',
         fontSize: '13px',
+        fontFamily: 'Nanum Gothic',
     },
     date: {
         textAlign: 'right',
         fontSize: '13px',
-        color: '#666666'
+        color: '#666666',
+        fontFamily: 'Nanum Gothic',
     },
     relevant: {
         textAlign: 'left',
         fontWeight: 'bold',
         fontSize: '14px',
+        fontFamily: 'Nanum Gothic',
     },
     relevantInfo: {
         textAlign: 'left',
         fontWeight: 'normal',
         fontSize: '14px',
+        fontFamily: 'Nanum Gothic',
     }
 });
