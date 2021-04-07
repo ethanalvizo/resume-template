@@ -3,8 +3,8 @@ import { v4 as uuidv4 } from "uuid";
 const emptyResume = {
   personalInfo: {
     fullName: "Ethan Alvizo",
-    title: "Web Developer",
-    phoneNumber: "6476484797",
+    title: "Full-Stack Developer",
+    phoneNumber: "1234567890",
     email: "ethanalvizo@gmail.com",
     website: "ethanalvizo.github.io",
     github: "github.com/ethanalvizo",
@@ -16,7 +16,7 @@ const emptyResume = {
       company: "Betterworth",
       startDate: "Jan 2021",
       endDate: "Apr 2021",
-      description: "-Created script to automate content flow from spreadsheet to application using Google Drive API and saving the company 2 days of work per content revision cycle -Developed social and notifications system using MongoDB",
+      description: "-Created script to automate content flow from spreadsheet to application using Google Drive API and saving the company 2 days of work per content revision cycle \n-Developed social and notifications system using MongoDB",
     },
     {
         id: uuidv4(),
@@ -24,7 +24,7 @@ const emptyResume = {
         company: "IntelliCulture",
         startDate: "May 2020",
         endDate: "Aug 2020",
-        description: "-Developed central portal to showcase products to potential investors/customers leading to an increase in sales pipeline of $200k annual recurring revenue -Designed dashboard for equipment and crop management using Bootstrap and jQuery -Created GPS tracking and course plotting for crop coverage tracking using Google Maps API",
+        description: "-Developed central portal to showcase products to potential investors/customers leading to an increase in sales pipeline of $200k annual recurring revenue \n-Designed dashboard for equipment and crop management using Bootstrap and jQuery \n-Created GPS tracking and course plotting for crop coverage tracking using Google Maps API",
       },
   ],
   project: [
@@ -38,19 +38,19 @@ const emptyResume = {
         id: uuidv4(),
         name: "Exercise Tracker",
         technology: "MongoDB/Express.js/React.js/Node.js",
-        description: "-Utilized MERN stack to create an exercise tracker with a fully functioning front and back end that logs multiple users’ physical activity and displays their weekly/monthly performance-Leveraged the Google Cloud Platform for storage of user data",
+        description: "-Utilized MERN stack to create an exercise tracker with a fully functioning front and back end that logs multiple users’ physical activity and displays their weekly/monthly performance \n-Leveraged the Google Cloud Platform for storage of user data",
     },
     {
         id: uuidv4(),
         name: "Wellness Dashboard",
         technology: "HTML/CSS/JavaScript/Bootstrap",
-        description: "-Designed customizable software to improve well-being through tracking aspects of user’s life and maintain awareness of which areas they’re neglecting or patterns in their behaviour",
+        description: "-Designed customizable software to improve well being through tracking aspects of user’s life and maintain awareness of which areas they’re neglecting or patterns in their behaviour",
     },
     {
         id: uuidv4(),
         name: "Weather Notification System",
         technology: "Python/Arduino/Twilio",
-        description: "-Created snow volume detector prototype to increase sources of weather information throughout a city to aid road maintenance decisions by municipal government in winter-Uses Twilio API for notifications and Arduino devices for snow volume and weight inputs",
+        description: "-Created snow volume detector prototype to increase sources of weather information throughout a city to aid road maintenance decisions by municipal government in winter \n-Uses Twilio API for notifications and Arduino devices for snow volume and weight inputs",
     },
   ],
   education: [

@@ -2,8 +2,8 @@ export const content = () => ({
     preview: {
         display: 'flex',
         flexDirection: 'column',
-        gap: '3rem',
         padding: '2rem',
+        gap: '0.5em',
         borderRadius: '5px',
         // boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
         // backgroundColor: "#eee"

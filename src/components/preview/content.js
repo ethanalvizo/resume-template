@@ -35,7 +35,7 @@ const Content = ({ personalInfo, experience, project, education }) => {
                     <Typography className={classes.subtitle}>Work Experience</Typography>
                     {experienceItems}
                 </Grid>
-                <Grid item>
+                <Grid item >
                     <Typography className={classes.subtitle}>Projects</Typography>
                     {projectItems}
                 </Grid>

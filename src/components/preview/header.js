@@ -2,7 +2,8 @@ import React from 'react'
 import {
     Typography, 
     Grid,
-    makeStyles
+    makeStyles,
+    Link
 } from "@material-ui/core";
 import { header as styles } from './styles';
 
@@ -37,11 +38,15 @@ const Header = ({ personalInfo }) => {
                     {isPhone && <Typography className={classes.contact}>
                         ({phoneNumber.substring(0,3)}) {phoneNumber.substring(3,6)}-{phoneNumber.substring(6,10)}
                     </Typography>}
+                    <Link href={website} target="_blank">
+                        <Typography className={classes.contact}>
+                            {website}
+                        </Typography>
+                    </Link>
                     <Typography className={classes.contact}>
-                        {website}
-                    </Typography>
-                    <Typography className={classes.contact}>
-                        {github}
+                        <Link href={github} target="_blank">
+                            {github}
+                        </Link>
                     </Typography>
                 </Grid>
             </Grid>
