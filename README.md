@@ -16,7 +16,7 @@ cd dev
 npm install
 npm start
 ```
-## Build With
+## Built With
 * [React](https://reactjs.org/)
 * [Material UI](https://material-ui.com/)
 * [react-to-print](https://www.npmjs.com/package/react-to-print)
